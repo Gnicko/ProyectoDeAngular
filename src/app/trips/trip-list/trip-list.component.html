@@ -24,6 +24,11 @@
       <td mat-cell *matCellDef="let row"> {{row.destination}} </td>
     </ng-container>
 
+    <ng-container matColumnDef="capacity">
+      <th mat-header-cell *matHeaderCellDef> Asientos Disponibles</th>
+      <td mat-cell *matCellDef="let row"> {{row.validateFreeSpace()}} </td>
+    </ng-container>
+
     <ng-container matColumnDef="bus">
       <th mat-header-cell *matHeaderCellDef> Colectivo</th>
       <td mat-cell *matCellDef="let row"> {{row.showBus()}} </td>

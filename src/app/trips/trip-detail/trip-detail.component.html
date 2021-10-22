@@ -1,9 +1,5 @@
 <mat-card [formGroup]="formTrip" *ngIf="!loading">
 
-
-  <p>Form Value: {{ formTrip.value | json }}
-  <p>Form Status: {{ formTrip.status }}</p>
-
   <mat-form-field appearance="legacy" class="input-form">
     <mat-label>Departure:</mat-label>
     <input matInput formControlName="departure">
@@ -23,9 +19,6 @@
       </mat-error>
     </ng-container>
   </mat-form-field>
-  <!--<mat-form-field appearance="legacy" class="input-form">
-    <mat-label>Bus:</mat-label>
-    <input matInput formControlName="bus">-->
 
   <mat-form-field appearance="fill" class="input-form">
     <mat-label>Bus:</mat-label>
@@ -42,7 +35,7 @@
       </mat-error>
 
     </ng-container>
-    <mat-hint>El colectivo que posee actualmente es Patente: {{nameBuses}} Marca: {{nameBrand}}
+    <mat-hint *ngIf="(fc.id.value!==null)">El colectivo que posee actualmente es Patente: {{nameBuses}} Marca: {{nameBrand}}
       Modelo: {{nameModel}}</mat-hint>
   </mat-form-field>
 

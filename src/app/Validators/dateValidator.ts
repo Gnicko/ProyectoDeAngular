@@ -1,7 +1,7 @@
 import {AbstractControl, ValidationErrors} from "@angular/forms";
 
 export class DateValidator {
-  public static validateDate(start: string, end: string) {
+   static validateDate(start: string, end: string) {
     return (control: AbstractControl): ValidationErrors | null => {
       const startDate1 = new Date(control.get(start)?.value).getTime()
       const endDate1 = new Date(control.get(end)?.value).getTime()
@@ -11,4 +11,5 @@ export class DateValidator {
       return null
     }
   }
+
 }

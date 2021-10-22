@@ -37,7 +37,7 @@
           {{brand.name}}
         </mat-option>
       </mat-select>
-      <mat-hint>La Marca que posee actualmente es:{{nameBrand}}</mat-hint>
+      <mat-hint *ngIf="(fc.id.value!==null)">La Marca que posee actualmente es:{{nameBrand}}</mat-hint>
     </mat-form-field>
   </div>
   <br>
@@ -58,9 +58,7 @@
 
       </ng-container>
 
-
-        <mat-hint >El Modelo que posee actualmente es:{{nameModel}}</mat-hint>
-
+        <mat-hint *ngIf="(fc.id.value!==null)">El Modelo que posee actualmente es:{{nameModel}}</mat-hint>
     </mat-form-field>
   </div>
   <br>

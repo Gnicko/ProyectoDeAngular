@@ -14,7 +14,7 @@ import {Person} from "../../domain/person";
 })
 export class TripListComponent implements OnInit {
   trip: Trip | undefined;
-  displayedColumns: string[] = ['id', 'departure', 'destination', 'bus', 'passengers', 'startDate', 'endDate', 'option'];
+  displayedColumns: string[] = ['id', 'departure', 'destination','capacity', 'bus', 'passengers', 'startDate', 'endDate', 'option'];
   trips: Trip[] = [];
   buses: Bus[] = [];
   passengers: Person[] = [];

@@ -58,6 +58,12 @@ mat-card {
   text-align: center;
 }
 
+.mat-column-capacity {
+  width: 32px;
+  border-right: 1px solid currentColor;
+
+  text-align: center;
+}
 .mat-column-option {
   width: 32px;
   border-right: 1px solid currentColor;
